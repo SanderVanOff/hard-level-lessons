@@ -1,13 +1,39 @@
-let num = 266219;
+let lang = confirm('Выберите язык: "ОК" - русский, "Отмена" - английски')
+  ? "ru"
+  : "en";
 
-num = String(num).split('');
-let result = num[0];
-
-for (let i = 1; i < num.length; i++) {
-    result = result * num[i];
+//IF-ELSE
+if (lang === "ru") {
+  console.log(
+    "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
+  );
+} else {
+  console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
 }
-console.log(result);
 
-result = result ** 3;
+switch (lang) {
+  case "ru":
+    console.log(
+      "Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"
+    );
+    break;
+  default:
+    console.log(
+      "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"
+    );
+}
 
-console.log(String(result).slice(0, 2));
+const daysOfWeek = [
+  ["Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье"],
+  ["Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"]
+];
+
+console.log(daysOfWeek[lang === "ru" ? 0 : 1].join());
+
+let namePerson = prompt("Введите ваше имя");
+
+namePerson !== "Артем" && namePerson !== "Александр"
+  ? console.log("студент")
+  : namePerson === "Артем"
+  ? console.log("директор")
+  : console.log("преподаватель");
