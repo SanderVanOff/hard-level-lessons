@@ -8,3 +8,4 @@ const getString = function(arg){
 };
 
 console.log(getString('Объявить функцию '));
+console.log(getString('Объявить функцию getTitle. Функция возвращает title меняя его таким образом: '));
