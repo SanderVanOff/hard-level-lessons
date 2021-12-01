@@ -1,13 +1,17 @@
-let num = 266219;
+const arr = ['7', '12', '28', '54', '453', '41', '259'];
 
-num = String(num).split('');
-let result = num[0];
-
-for (let i = 1; i < num.length; i++) {
-    result = result * num[i];
+for(let i = 0; i < arr.length; i++){
+  if(arr[i].startsWith('2') || arr[i].startsWith('4')) {
+    console.log(arr[i]);
+  }
 }
-console.log(result);
 
-result = result ** 3;
 
-console.log(String(result).slice(0, 2));
+let n = 100;
+next: 
+for(let i = 2; i <= n; i++){
+  for(let j = 2; j < i; j++) {
+    if(i % j === 0) continue next;
+  }
+  console.log(i, `Делители этого числа: 1 и ${i}`);
+}
