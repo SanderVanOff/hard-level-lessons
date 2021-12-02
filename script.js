@@ -8,10 +8,18 @@ for(let i = 0; i < arr.length; i++){
 
 
 let n = 100;
-next: 
-for(let i = 2; i <= n; i++){
-  for(let j = 2; j < i; j++) {
-    if(i % j === 0) continue next;
+
+function isSimpleNum(num) {
+  for (let i = 2; i < num; i++) {
+    while (num % i === 0) {
+      return false;
+    }
   }
-  console.log(i, `Делители этого числа: 1 и ${i}`);
+  return num > 1;
+}
+
+for (let j = 2; j <= n; j++) {
+  if (isSimpleNum(j)) {
+    console.log(j, `Делители этого числа: 1 и ${j}`);
+  }
 }
