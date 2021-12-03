@@ -10,5 +10,3 @@ week.forEach((item, i) => {
     document.write(`<div>${item}</div>`);
   }
 });
-
-console.log((new Date()).getDay());
