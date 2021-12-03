@@ -1,13 +1,14 @@
-let num = 266219;
+const week = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
 
-num = String(num).split('');
-let result = num[0];
+week.forEach((item, i) => {
+  
+  if((new Date()).getDay()-1 === i ){
+    document.write(`<div><b>${item}</b></div>`);
+  } else if(i === 5 || i === 6){
+    document.write(`<div><i>${item}</i></div>`);
+  } else {
+    document.write(`<div>${item}</div>`);
+  }
+});
 
-for (let i = 1; i < num.length; i++) {
-    result = result * num[i];
-}
-console.log(result);
-
-result = result ** 3;
-
-console.log(String(result).slice(0, 2));
+console.log((new Date()).getDay());
